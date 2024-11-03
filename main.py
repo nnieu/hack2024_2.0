@@ -1,14 +1,8 @@
-from flask import Flask
+from website import create_app
 
-def create_app():
+app = create_app()
 
-    from .view import view
-
-    app = Flask(__name__)
-
-
-    app.register_blueprint(view, url_prefix='/')
-
-    
-    return app
-
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
+ # http://127.0.0.1:5000/
+ 

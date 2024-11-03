@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+:root {
+    --text-color: #E3E3E3;
+    --subheading-color: #828282;
+    --placement-color: #A6A6A6;
+    --primary-color: hsl(0, 0%, 14%);
+    --secondary-color: #383838;
+    --secondary-hover-color: #444;
+    --neon-green: #39FF14;
+    --electric-blue: #00FFFF;
+}
+
+body {
+    background-color: #242424 !important; 
+} 
+
+.header {
+    color: #E3E3E3 !important;
+    margin-top: 7vh;
+    padding: 2rem;
+    text-align: center !important; /* Center align header text */
+}
+
+.header .title1 {
+    font-size: 2.7rem;
+    text-align: center; /* Left align title */
+    background-clip: text;
+    animation: gradientAnimation 3s ease-in-out infinite;
+    background: linear-gradient(to right, #00FFFF, #39FF14);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem; /* Optional: add space below title */
+}
+
+.header .title{
+    font-size: 2.7rem;
+    text-align: left; /* Left align title */
+    background-clip: text;
+    animation: gradientAnimation 3s ease-in-out infinite;
+    background: linear-gradient(to right, #00FFFF, #39FF14);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem; /* Optional: add space below title */
+}
+
+.header .subtitle {
+    text-align: left; /* Left align subtitle */
+    font-size: 2.4rem; 
+    color: var(--subheading-color);
+}
+.difficulty-btn{
+    background: var(--secondary-hover-color);
+    border-radius: 0.75rem;
+    padding: 7px 10px;
+}
+
+.difficulty-list {
+    margin-top: 14vh; /* Space above the difficulty list */
+    list-style: none;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    gap: 1.25rem; /* Space between items */
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    padding: 1rem; /* Optional padding around the list */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.difficulty-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
+}
+
+.difficulty-list .difficulty {
+    padding: 3.5rem; /* Space inside difficulty items */
+    margin: 0; /* Reset margin */
+    cursor: pointer; /* Pointer on hover */
+    width: 227px; /* Fixed width for each difficulty item */
+    flex-shrink: 0; /* Prevent items from shrinking */
+    border-radius: 0.75rem; /* Rounded corners */
+    background: var(--secondary-color); /* Background color for items */
+    transition: background 0.3s; /* Smooth transition on hover */
+}
+
+.difficulty-list .difficulty:hover {
+    background: var(--secondary-hover-color); /* Change background on hover */
+}
+
+.difficulty-list .difficulty .text {
+    font-weight: 400; /* Regular font weight */
+    font-size: 21px; /* Font size for difficulty text */
+    color: var(--text-color); /* Text color */
+    text-align: center; /* Center text within each item */
+}
+
+.typing-area {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem; /* Add padding for better spacing */
+    background: var(--primary-color); /* Optional: background for typing area */
+}
+
+.typing-area .input_wrapper {
+    display: flex;
+    gap: 0.75rem; /* Space between inputs and button */
+    width: 70%; /* Ensure it takes full width */
+}
+
+.typing-area .typing-input {
+    width: 100%; /* Full width for input fields */
+    height: 56px; /* Set height for inputs */
+    border: none;
+    outline: none;
+    border-radius: 6.2rem;
+    font-size: 1rem;
+    color: var(--text-color) !important;
+    padding: 1.1rem 3rem 1.1rem 1.5rem;
+    background: var(--secondary-color);
+    margin-right:.5rem;
+}
+
+.material-symbols-outlined {
+    background: transparent; 
+    border: none; 
+    cursor: pointer; 
+    color: var(--text-color); 
+    padding: 0.5rem; 
+    border-radius: 0.5rem; 
+    transition: background 0.3s; 
+    height: 56px; /* Match the height of the input */
+    display: flex; /* Ensure icon is centered */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+}
+
+.material-symbols-outlined:hover {
+    background: rgba(255, 255, 255, 0.1); 
+}
+
+.chat-list {
+    padding: 2rem 1rem 12rem;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.chat-list .message {
+    margin-top: 1.5rem;
+}
+
+.chat-list .message .message-content {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: center;
+}
+
+.chat-list .message-outgoing .message-content .text {
+    color: var(--text-color) !important;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0; /* Optional: spacing for the footer */
+}
